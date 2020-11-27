@@ -63,7 +63,7 @@
               <a class="nav-link" href="Login.jsp">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="newjsp.jsp"><img src="Images/cart.png"
+              <a class="nav-link" href="cart.jsp"><img src="Images/cart.png"
               width="30" height="20"/>
 </a>
             </li>
@@ -151,6 +151,41 @@
                   
                 </iframe><a href="https://www.maps.ie/route-planner.htm">Our Location</a></div>
    </div>
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <form style="width:100% !Important;">
+            <h1>Contact us:</h1>
+                        <div class="form-group" >
+                            <label for="name"><b>Name</b></label>
+                            <input type="text" class="form-control" id="name"  placeholder="Enter name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><b>Email address</b></label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+            <label><b>Type of Message</b></label>
+                
+             <div class="form-group">
+            <input type="radio" id="Complaint" name="Complaint" value="Complaint">
+  <label for="Complaint">Complaint</label><br>
+                        </div>
+                         <div class="form-group">
+            <input type="radio" id="Delivery" name="Delivery" value="Delivery">
+  <label for="Delivery">Delivery</label><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><b>Message</b></label>
+                            <textarea class="form-control" id="message" rows="6" required></textarea>
+                        </div>
+                        <div class="mx-auto">
+                        <button type="submit" class="btn btn-primary text-right">Submit</button></div>
+                    </form>
+          
+   </div>
+    
     <!-- Footer -->
     <footer class="py-5 bg-dark" Style="opacity:0.89 !Important;">
       <div class="container">

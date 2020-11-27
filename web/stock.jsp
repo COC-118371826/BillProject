@@ -42,6 +42,7 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="stock.jsp">Stock Level</a>
                                     <a class="nav-link" href="Sales.jsp">Sales Report</a>
+                                      <a class="nav-link" href="userReport.jsp">User Activity</a>
                                 </nav>
                             </div>
                             
