@@ -8,11 +8,11 @@ package com.bsapp.utils;
 
 /**
  *
- * @author Julie
+ * @author cilli
  */
 public interface IConstants {
     
-    //User Types
+  //User Types
     public static final String USER_TYPE_ADMIN = "ADMIN";
     public static final String USER_TYPE_GENERAL_USER = "GENUSER";
     

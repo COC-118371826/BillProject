@@ -54,7 +54,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-sign"></i></div>
                                 Update Products
                             </a>
-                           <a class="nav-link" href="index.html">
+                           <a class="nav-link" href="Logout.jsp">
                                 <div class="sb-nav-link-icon"><i class="fas fa-times-circle"></i></div>
                                 Logout
                             </a>

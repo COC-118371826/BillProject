@@ -113,9 +113,16 @@ h4{
      <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home
+              <a id="nav-link1" href="index.html"Style="color:white !important; line-height: 250% !important;">Home
                 <span class="sr-only">(current)</span>
               </a>
+                    <% if (user != null){ %> 
+<script>
+
+document.getElementById("nav-link1").innerHTML = "";
+document.getElementById('nav-link1').href= "";
+</script> 
+                  <% } %>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="Informative.jsp"Style="color:white !important;">Products</a>
@@ -127,7 +134,7 @@ h4{
 <script>
 
 document.getElementById("nav-link").innerHTML = "Logout";
-document.getElementById('nav-link').href= "index.html";
+document.getElementById('nav-link').href= "Logout.jsp";
 </script> 
                   <% } %>
             </li>
@@ -239,6 +246,8 @@ function filterFunction() {
                 </h4>
                 <h5><b>$5.00</b></h5>
             <ul class="card-text" >
+                                       <li><b>ID:</b> 2
+                     </li>
                    <li><b>Description:</b> Indicates Airport ahead
                      </li>
                       <li><b>Colour:</b> Yellow
@@ -252,9 +261,11 @@ function filterFunction() {
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
               </div>
-                <form action="cart" method="post"><% if (user != null){ %>
-                <input type="hidden" name="productCode" value="8601">
-                <input type="submit" id="Add to Cart" value="Add To Cart"style= "color: white !Important;background-color: #007bff !Important;"><% } %>
+                 <form  action="cart" method="POST"><% if (user != null){ %>
+               
+                <input type="hidden" name="productCode" value="2">
+                <input type="submit" value="Add To Cart"style= "color: white !Important;background-color: #007bff !Important;">
+         <% } %>
             </form><!--<a href="cart?productCode=8601">Add To Cart</a>-->
             </div>
              

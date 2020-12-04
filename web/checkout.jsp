@@ -3,23 +3,15 @@
     Created on : 17 Nov 2020, 14:47:14
     Author     : cilli
 --%>
+<%@page import="com.bsapp.utils.IConstants"%>
+<%@page import="model.User"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {
-    background-image: url(https://www.itl.cat/pngfile/big/42-429842_light-grey-background-wallpaper-light-grey-background-wallpaper.jpg);
-     
-  font-family: Arial;
-  font-size: 17px;
-  padding: 8px;
-}
-
-* {
-  box-sizing: border-box;
-}
 
 .row {
   display: -ms-flexbox; /* IE10 */
@@ -50,9 +42,6 @@ body {
   padding: 0 16px;
 }
 
-.container {
-
-}
 
 input[type=text] {
   width: 100%;
@@ -95,14 +84,7 @@ a {
   color: #2196F3;
 }
 
-hr {
-  border: 1px solid lightgrey;
-}
 
-span.price {
-  float: right;
-  color: grey;
-}
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
 @media (max-width: 800px) {
@@ -121,6 +103,7 @@ span.price {
     <link href="css/heroic-features.css" rel="stylesheet">
 </head>
 <body>
+    <% User user = (User)session.getAttribute(IConstants.SESSION_KEY_USER);%>
   <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" 
          >
@@ -133,15 +116,15 @@ span.price {
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
+            
             <li class="nav-item">
               <a class="nav-link" href="Informative.jsp">Products</a>
             </li>
-         
+         <li class="nav-item active">
+              <a class="nav-link" href="Logout.jsp">Logout
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="cart.jsp"><img src="Images/cart.png"
               width="30" height="20"/>
@@ -151,32 +134,36 @@ span.price {
         </div>
       </div>
     </nav>
-  <br></br><br></br>
+ 
+   <header class="jumbotron my-4" Style="opacity:0.89 !Important;">
 <div class="row">
   <div class="col-75">
     <div class="container">
-      <form>
       
+        <form>
         <div class="row">
+           
           <div class="col-50">
             <h3>Billing Address</h3>
+             <% if (user != null){ %>
+  
             <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="FullName" placeholder="John M. Doe">
+            <input type="text" id="fname" name="FullName" placeholder="<%= user.getUsername() %>">
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <input type="text" id="email" name="email" placeholder="<%= user.getEmail() %>">
             <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <input type="text" id="adr" name="address" placeholder="Enter your Address">
             <label for="city"><i class="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="New York">
+            <input type="text" id="city" name="city" placeholder="Enter your City">
 
             <div class="row">
               <div class="col-50">
                 <label for="state">Province</label>
-                <input type="text" id="state" name="Province" placeholder="Munster">
+                <input type="text" id="state" name="Province" placeholder="Enter your Province">
               </div>
               <div class="col-50">
                 <label for="zip">Zip</label>
-                <input type="text" id="zip" name="zip" placeholder="10001">
+                <input type="text" id="zip" name="zip" placeholder="Enter your Zip">
               </div>
             </div>
           </div>
@@ -191,31 +178,42 @@ span.price {
               <i class="fa fa-cc-discover" style="color:orange;"></i>
             </div>
             <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <input type="text" id="cname" name="cardname" placeholder="<%= user.getUsername() %>">
             <label for="ccnum">Credit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <input type="text" id="ccnum" name="cardnumber" placeholder="Enter Credit Card Number">
             <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <input type="text" id="expmonth" name="expmonth" placeholder="Enter Month">
             <div class="row">
               <div class="col-50">
                 <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2018">
+                <input type="text" id="expyear" name="expyear" placeholder="Enter Year">
               </div>
               <div class="col-50">
                 <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352">
+                <input type="text" id="cvv" name="cvv" placeholder="Enter CVV">
               </div>
             </div>
           </div>
-          
-        </div>
-
-        <input type="submit" value="Continue to checkout" class="btn" >
-      </form>
+           <% } %>
+        </div></form>
+<div class="pull-right" style="margin: 10px">
+                    <a href="OrderConfirmation.jsp" class="btn btn-success pull-right" Style="color:White!Important;background-color:black!Important;">Checkout</a>
+                  
+                </div>
+      
     </div>
   </div>
   
 </div>
-
+   </header>
+<footer class="py-5 bg-dark" Style="opacity:0.89 !Important;">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; The Sign Shop 2020</p>
+      <a href="https://www.facebook.com/"><img width="60" height="60" src="Images/fb.png" title="facebook" alt="facebook"></a>
+      <a href="https://www.Twitter.com/"><img width="60" height="60" src="Images/twitter.jpg" title="twitter" alt="twitter"></a>
+      <a href="https://www.Youtube.com/"><img width="60" height="60" src="Images/youtube.jpg" title="youtube" alt="youtube"></a>
+    </div>
+      
+    </footer>
 </body>
 </html>

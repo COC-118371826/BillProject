@@ -5,9 +5,9 @@
  */
 package com.bsapp.dao;
 
-import com.bsapp.utils.IConstants;
 import java.util.Vector;
 import model.User;
+import com.bsapp.utils.IConstants;
 
 /**
  *

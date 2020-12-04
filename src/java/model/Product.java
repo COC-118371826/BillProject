@@ -10,26 +10,31 @@ package model;
  * @author cilli
  */
 public class Product {
-     private long id;
+     private String id;
     private String ProductName;
     private String ProductDescription;
     private String ProductType;
     private String ProductColor;
-    private String ProductPrice;
+    private double ProductPrice;
     private String ProductWeight;
      private String ProductHeight;
 
+       public Product() {
+        id = "";
+        ProductDescription = "";
+        ProductPrice = 0;
+    }
     /**
      * @return the id
      */
-    public long getId() {
+    public String getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -51,7 +56,7 @@ public class Product {
      * @return the ProductDescription
      */
     public String getProductDescription() {
-        return ProductDescription;
+        return this.ProductDescription;
     }
 
     /**
@@ -92,14 +97,14 @@ public class Product {
     /**
      * @return the ProductPrice
      */
-    public String getProductPrice() {
-        return ProductPrice;
+    public double getProductPrice() {
+        return this.ProductPrice;
     }
 
     /**
      * @param ProductPrice the ProductPrice to set
      */
-    public void setProductPrice(String ProductPrice) {
+    public void setProductPrice(double ProductPrice) {
         this.ProductPrice = ProductPrice;
     }
 
@@ -131,5 +136,9 @@ public class Product {
         this.ProductHeight = ProductHeight;
     }
 
+
+
+  
+    
     
 }

@@ -36,7 +36,7 @@ background-color: white;
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
+        <title>Update Products</title>
         <link href="css/hi.css" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
@@ -78,7 +78,7 @@ background-color: white;
                                 <div class="sb-nav-link-icon"><i class="fas fa-sign"></i></div>
                                 Update Products
                             </a>
-                                                       <a class="nav-link" href="index.html">
+                                                       <a class="nav-link" href="Logout.jsp">
                                 <div class="sb-nav-link-icon"><i class="fas fa-times-circle"></i></div>
                                 Logout
                             </a>
@@ -96,7 +96,7 @@ background-color: white;
                     <div class="container-fluid">
                        <div class="heading text-center">
                            
-                            <h2>Manage Users</h2>
+                            <h2>Manage Products</h2>
                         </div>
 
                         <div style="margin-left: 5%; margin-right: 5%;"> 
@@ -112,7 +112,7 @@ background-color: white;
                                     <th>Colour</th>
                                     <th>Weight</th>
                                     <th>Height</th>
-                                    <th>Delete </th>
+                                  
                                 </tr>
                        
                             </tr>
@@ -137,7 +137,11 @@ background-color: white;
                             </table>
                         </div>   
                                        <div class="text-center">
-                                           <button type="submit" class="btn float-center login_btn"" value="Update User">Update User </button>
+                                           <button type="submit" class="btn float-center login_btn"" value="Update Product">Update Product </button>
+                            </div>
+                                       <br>
+                                       <div class="text-center">
+                                           <button type="submit" class="btn float-center login_btn"" value="Delete Product">Delete Product </button>
                             </div>
                             </form>
                         </div>

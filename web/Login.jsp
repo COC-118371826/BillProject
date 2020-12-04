@@ -10,7 +10,7 @@
 <html>
     <head><style>
             html,body{
-background-image: url('https://64.media.tumblr.com/bdc41e65a816a63ea1050d2fd58fa84c/d3914877b2bf183b-84/s400x600/6df7b6c1d79f458b5e7b51e27e25defddaf4b02e.gifv');
+background-image: url('https://i.pinimg.com/originals/56/ac/b7/56acb75735c94b212e9adbf13f19f25c.gif');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
@@ -181,7 +181,7 @@ border:0 !important;
 <!------ Include the above in your HEAD tag ---------->
     </head>
 <body>  <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style=" background: -webkit-linear-gradient(left,#007bff,black) !Important;">
       <div class="container">
           <img src="Images/LogoMakr-05a923.png"
               width="190"height="60"/>
@@ -251,7 +251,7 @@ border:0 !important;
             </div>
      <br></br>
         <!-- Footer -->
-  <footer class="py-5 bg-dark"Style="opacity:0.89 !Important;">
+  <footer class="py-5 bg-dark"Style="opacity:0.89 !Important; background: -webkit-linear-gradient(right,#007bff,black) !Important;" >
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; The Sign Shop 2020</p>
           

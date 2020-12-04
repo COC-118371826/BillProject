@@ -56,7 +56,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-sign"></i></div>
                                 Update Products
                             </a>
-                                                       <a class="nav-link" href="index.html">
+                                                       <a class="nav-link" href="Logout.jsp">
                                 <div class="sb-nav-link-icon"><i class="fas fa-times-circle"></i></div>
                                 Logout
                             </a>
@@ -72,7 +72,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h1><b>Stock</b></h1>
+                        <h1><b>Stock:</b></h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Reports</li>
                         </ol>

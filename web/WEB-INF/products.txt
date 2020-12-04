@@ -1,0 +1,13 @@
+1|Hospital - Indicates Hospital ahead|6.00
+2|Airport - Indicates Airport ahead|5.00
+3|One Way - Indicates One Way ONLY|4.00
+4|No Entry - Indicates No Entry|6.00
+5|No Right Turn - Indicates No Right Turn|2.00
+6|No Left Turn  - Indicates No Left Turn|4.00
+7|Road Bend - Indicates series of dangerous bends ahead|6.00
+8|T Junction - Indicates T-Junction ahead|10.00
+9|Slippery Road - Indicates slippery road ahead|5.00
+10|Traffic Merge - Indicates Left Turn only|5.00
+11|Road Works ahead - Indicates Road works ahead|7.00
+12|Roundabout - indicates roundabout ahead|8.00
+

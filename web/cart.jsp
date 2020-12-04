@@ -3,129 +3,112 @@
     Created on : 23 Nov 2020, 13:35:07
     Author     : cilli
 --%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <title>Murach's Java Servlets and JSP</title>
+  
 
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+
+    
 <style>
-    body{
-        background-image: url("https://4.bp.blogspot.com/-Wg0zzoa-S5E/UsfodG7UFII/AAAAAAAAPvw/UhTRgyy-zh8/s1600/panda-shopping-trolley.gif");
-        
-          background-size: 100%;
-            opacity: 0.975;
-    }
+.login_btn{
+color: white !Important;
+background-color:  #007bff !Important;
+width: 10%;
+}
+.checkout_btn{
+color: white !Important;
+background-color:  black !Important;
+width: 10%;
+}
+.login_btn:hover{
+color: black;
+background-color: white;
+}
 </style>
     </head>
     <body>
-      <script src="https://use.fontawesome.com/c560c025cf.js"></script>
-<div class="container">
-   <div class="card shopping-cart">
-            <div class="card-header bg-dark text-light">
-                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                Shopping cart
-                <a href="Informative.jsp" class="btn btn-outline-info btn-sm pull-right"
-                   Style="color:white !Important;background-color:Black !Important;">Continue shopping</a>
-                <div class="clearfix"></div>
-            </div>
-            <div class="card-body">
-                    <!-- PRODUCT -->
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-2 text-center">
-                                <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
-                        </div>
-                        <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
-                            <h4 class="product-name"><strong>Product Name</strong></h4>
-                            <h4>
-                                <small>Product description</small>
-                            </h4>
-                        </div>
-                        <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
-                            <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
-                                <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
-                            </div>
-                            <div class="col-4 col-sm-4 col-md-4">
-                                <div class="quantity">
-                                    <input type="button" value="+" class="plus">
-                                    <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
-                                           size="4">
-                                    <input type="button" value="-" class="minus">
-                                </div>
-                            </div>
-                            <div class="col-2 col-sm-2 col-md-2 text-right">
-                                <button type="button" class="btn btn-outline-danger btn-xs">
-                                    <i class="fa fa-trash" aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- END PRODUCT -->
-                    <!-- PRODUCT -->
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-2 text-center">
-                                <img class="img-responsive" src="http://placehold.it/120x80" alt="prewiew" width="120" height="80">
-                        </div>
-                        <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
-                            <h4 class="product-name"><strong>Product Name</strong></h4>
-                            <h4>
-                                <small>Product description</small>
-                            </h4>
-                        </div>
-                        <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
-                            <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
-                                <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
-                            </div>
-                            <div class="col-4 col-sm-4 col-md-4">
-                                <div class="quantity">
-                                    <input type="button" value="+" class="plus">
-                                    <input type="number" step="1" max="99" min="1" value="1" title="Qty" class="qty"
-                                           size="4">
-                                    <input type="button" value="-" class="minus">
-                                </div>
-                            </div>
-                            <div class="col-2 col-sm-2 col-md-2 text-right">
-                                <button type="button" class="btn btn-outline-danger btn-xs">
-                                    <i class="fa fa-trash" aria-hidden="true"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- END PRODUCT -->
-                <div class="pull-right">
-                    <a href="" class="btn btn-outline-secondary pull-right">
-                        Update shopping cart
-                    </a>
-                </div>
-            </div>
-            <div class="card-footer">
-                <div class="coupon col-md-5 col-sm-5 no-padding-left pull-left">
-                    <div class="row">
-                        <div class="col-6">
-                            <input type="text" class="form-control" placeholder="Fast b4 Panda Attack!">
-                        </div>
-                        <div class="col-6">
-                            <input type="submit" class="btn btn-default" Style="color:White!Important;background-color:black!Important;"value="Use coupon">
-                        </div>
-                    </div>
-                </div>
-                <div class="pull-right" style="margin: 10px">
-                    <a href="checkout.jsp" class="btn btn-success pull-right" Style="color:White!Important;background-color:black!Important;">Checkout</a>
-                    <div class="pull-right" style="margin: 5px">
-                        Total price: <b>50.00€</b>
-                    </div>
-                </div>
-            </div>
-        </div>
+         <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" 
+         >
+      <div class="container">
+          <img src="Images/LogoMakr-05a923.png" 
+              width="190" height="60"/>
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+      </div>
+    </nav>
+         
+         <br>  <br>  <br>
+
+
+<div class="w3-container">
+
+
+  <table class="w3-table w3-striped w3-border">
+  <tr>
+    <th>Quantity</th>
+    <th>Name - Description</th>
+    <th>Price</th>
+    <th>Amount</th>
+  
+  </tr>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:forEach var="item" items="${cart.items}">
+  <tr>
+    <td>
+      <form action="" method="post">
+        <input type="hidden" name="productCode" value="${item.product.id}">
+        <input type=text name="quantity" value="${item.quantity}" id="quantity">
+        <input type="submit" value="Update">
+      </form>
+    </td>
+    <td>${item.product.getProductDescription()}</td>
+    <td>${item.product.getProductPrice()}</td>
+    <td>${item.totalCurrencyFormat}</td>
+    <td>
+      <form action="" method="post">
+        <input type="hidden" name="productCode" 
+               value="${item.product.id}">
+        <input type="hidden" name="quantity" 
+               value="0">
+        <input type="submit" value="Remove Item">
+      </form>
+    </td>
+  </tr>
+</c:forEach>
+</table>
 </div>
-      <br><br><br> <br><br><br>
-         <!-- Footer -->
+<p><b>To change the quantity</b>, enter the new quantity 
+      and click on the Update button.</p>
+  
+<form action="Informative.jsp" method="post">
+    
+  <input type="hidden" name="action" value="shop">
+  <input type="submit" id="Login" value="Continue Shopping" class="btn float-right login_btn">
+</form>
+
+<form action="checkout.jsp" method="post">
+  <input type="hidden" name="action" value="checkout">
+<input type="submit" id="Login" value="Checkout" class="btn float-right checkout_btn">
+</form>
+<br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+ <!-- Footer -->
     <footer class="py-5 bg-dark" Style="opacity:0.89 !Important;">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; The Sign Shop 2020</p>
@@ -135,5 +118,5 @@
     </div>
       
     </footer>
-    </body>
+</body>
 </html>
