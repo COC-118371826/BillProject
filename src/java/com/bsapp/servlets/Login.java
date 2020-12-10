@@ -5,25 +5,24 @@
  */
 package com.bsapp.servlets;
 
-
-
 import com.bsapp.manager.UserManager;
-import model.User;
-import com.bsapp.utils.StringUtils;
+import com.bsapp.utils.IConstants;
+import com.bsapp.utils.StringUtil;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.bsapp.utils.IConstants;
+import model.User;
 
 /**
  *
- * @author Julie
+ * @author cilli
  */
-public class LoginServlet extends HttpServlet implements IConstants {
+public class Login extends HttpServlet implements IConstants {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,7 +39,7 @@ public class LoginServlet extends HttpServlet implements IConstants {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
-        if (StringUtils.isStringEmpty(email) || StringUtils.isStringEmpty(password)) {
+        if (StringUtil.isStringEmpty(email) || StringUtil.isStringEmpty(password)) {
 
             RequestDispatcher rd = request.getRequestDispatcher("/Login.jsp");
             rd.forward(request, response);

@@ -253,7 +253,7 @@ function filterFunction() {
                 <input type="hidden" name="productCode" value="10">
                 <input type="submit" value="Add To Cart"style= "color: white !Important;background-color: #007bff !Important;">
          <% } %>
-            </form><!--<a href="cart?productCode=8601">Add To Cart</a>-->
+            </form>
             </div>
           </div>
  <div class="col-lg-4 col-md-6 mb-4">

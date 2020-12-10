@@ -178,7 +178,7 @@ border:0 !important;
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 
-<!------ Include the above in your HEAD tag ---------->
+
     </head>
 <body>  <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style=" background: -webkit-linear-gradient(left,#007bff,black) !Important;">
@@ -217,7 +217,7 @@ border:0 !important;
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                 <h3 class="register-heading">Login</h3>
                                 <div class="row register-form">
-                                   <form class="form-signin" action="LoginServlet" method="POST">
+                                   <form class="form-signin" action="Login" method="POST">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -256,7 +256,7 @@ border:0 !important;
       <p class="m-0 text-center text-white">Copyright &copy; The Sign Shop 2020</p>
           
     </div>
-    <!-- /.container -->
+
   </footer>
 </body>
 </html>

@@ -215,6 +215,7 @@ function filterFunction() {
   }
 }
 </script>
+<!--Products-->
         <div class="row">
 
           <div class="col-lg-4 col-md-6 mb-4">
@@ -244,7 +245,7 @@ function filterFunction() {
                 <input type="hidden" name="productCode" value="4">
                 <input type="submit" value="Add To Cart"style= "color: white !Important;background-color: #007bff !Important;">
          <% } %>
-            </form><!--<a href="cart?productCode=8601">Add To Cart</a>-->
+            </form>
             </div>
           </div>
 

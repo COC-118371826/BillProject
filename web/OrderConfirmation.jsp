@@ -11,7 +11,7 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+
 <style>body{
     background-image: url("https://cdn.pixabay.com/photo/2018/07/10/10/40/travel-3528324_960_720.jpg");
  
@@ -46,7 +46,7 @@
 }
 .login_btn{
 color: white !Important;
-background-color:  #007bff !Important;
+background-color:  black !Important;
 width: 10%;
 }.login_btn:hover{
 color: black;

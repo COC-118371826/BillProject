@@ -233,6 +233,7 @@ function filterFunction() {
   }
 }
 </script>
+<!--Products-->
         <div class="row">
 
          
@@ -270,22 +271,14 @@ function filterFunction() {
             </div>
              
           </div>
-
-          
-
-          
-          </div>
-
-        </div>
-        <!-- /.row -->
+ </div>
+ </div>
+   
 
       </div>
-      <!-- /.col-lg-9 -->
+     
   </div>
-    <!-- /.row -->
 
-
-  <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark" Style="opacity:0.89 !Important;">

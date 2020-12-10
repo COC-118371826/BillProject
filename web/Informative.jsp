@@ -235,6 +235,7 @@ function filterFunction() {
   }
 }
 </script>
+<!--Products-->
         <div class="row">
 
           <div class="col-lg-4 col-md-6 mb-4">
@@ -340,21 +341,12 @@ function filterFunction() {
             </form><!--<a href="cart?productCode=8601">Add To Cart</a>-->
             </div>
               
+          </div>          
           </div>
-
-          
-          </div>
-
         </div>
-        <!-- /.row -->
-
-      </div>
-      <!-- /.col-lg-9 -->
+      </div>     
   </div>
-    <!-- /.row -->
 
-
-  <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark" Style="opacity:0.89 !Important;">
@@ -364,7 +356,7 @@ function filterFunction() {
       <a href="https://www.Twitter.com/"><img width="60" height="60" src="Images/twitter.jpg" title="twitter" alt="twitter"></a>
       <a href="https://www.Youtube.com/"><img width="60" height="60" src="Images/youtube.jpg" title="youtube" alt="youtube"></a>
     </div>
-    <!-- /.container -->
+  
   </footer>
 
   <!-- Bootstrap core JavaScript -->

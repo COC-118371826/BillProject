@@ -79,7 +79,7 @@ height: 100%;
       <p class="m-0 text-center text-white">Copyright &copy; The Sign Shop 2020</p>
           
     </div>
-    <!-- /.container -->
+    
   </footer>
 
 

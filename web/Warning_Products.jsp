@@ -218,7 +218,7 @@ function filterFunction() {
 }
 </script>
         <div class="row">
-
+<!--Products-->
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
               <a href="#"><img class="card-img-top" src="Images/download.png" style= "border: 9px solid #007bff;alt=""></a>
@@ -271,7 +271,7 @@ function filterFunction() {
               <div class="card-footer">
                 <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
               </div>
-               <  <form  action="cart" method="POST"><% if (user != null){ %>
+                 <form  action="cart" method="POST"><% if (user != null){ %>
                
                 <input type="hidden" name="productCode" value="8">
                 <input type="submit" value="Add To Cart"style= "color: white !Important;background-color: #007bff !Important;">
@@ -368,7 +368,7 @@ function filterFunction() {
                 <input type="hidden" name="productCode" value="11">
                 <input type="submit" value="Add To Cart"style= "color: white !Important;background-color: #007bff !Important;">
          <% } %>
-            </form><!--<a href="cart?productCode=8601">Add To Cart</a>-->
+            </form>
             </div>
           </div>
 
@@ -403,7 +403,7 @@ function filterFunction() {
                 <input type="hidden" name="productCode" value="12">
                 <input type="submit" value="Add To Cart"style= "color: white !Important;background-color: #007bff !Important;">
          <% } %>
-            </form><!--<a href="cart?productCode=8601">Add To Cart</a>-->
+                 </form>
             </div>
           </div>
 

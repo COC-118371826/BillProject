@@ -3,6 +3,8 @@
     Created on : 23 Nov 2020, 13:35:07
     Author     : cilli
 --%>
+<%@page import="com.bsapp.utils.IConstants"%>
+<%@page import="model.User"%>
 <%@page contentType="text/html" pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,6 +23,9 @@
 
     
 <style>
+    body{
+        background-image: url(https://cdn.pixabay.com/photo/2016/11/15/22/29/shopping-cart-1827716_1280.jpg);
+    }
 .login_btn{
 color: white !Important;
 background-color:  #007bff !Important;
@@ -36,26 +41,30 @@ color: black;
 background-color: white;
 }
 </style>
+
     </head>
     <body>
+            <% User user = (User)session.getAttribute(IConstants.SESSION_KEY_USER);%>
          <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" 
-         >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
       <div class="container">
-          <img src="Images/LogoMakr-05a923.png" 
-              width="190" height="60"/>
+          <img src="Images/LogoMakr-05a923.png"
+              width="190"height="60"/>
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+         
+        </div>
       </div>
     </nav>
          
          <br>  <br>  <br>
 
 
-<div class="w3-container">
+<div class="w3-container" style="background-color:white !Important;">
 
 
   <table class="w3-table w3-striped w3-border">
@@ -93,30 +102,37 @@ background-color: white;
 </c:forEach>
 </table>
 </div>
-<p><b>To change the quantity</b>, enter the new quantity 
+<p style="color:black;background-color:white"><b>To change the quantity</b>, enter the new quantity 
       and click on the Update button.</p>
-  
+  <% if (user != null){ %>
+      
+        
+      <form action="checkout.jsp" method="post">
+  <input type="hidden" name="action" value="checkout">
+<input type="submit" id="Login" value="Checkout" class="btn float-right checkout_btn">
+ <% } %>
+ </form>
 <form action="Informative.jsp" method="post">
     
   <input type="hidden" name="action" value="shop">
   <input type="submit" id="Login" value="Continue Shopping" class="btn float-right login_btn">
 </form>
 
-<form action="checkout.jsp" method="post">
-  <input type="hidden" name="action" value="checkout">
-<input type="submit" id="Login" value="Checkout" class="btn float-right checkout_btn">
-</form>
+
 <br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br>
- <!-- Footer -->
-    <footer class="py-5 bg-dark" Style="opacity:0.89 !Important;">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; The Sign Shop 2020</p>
-      <a href="https://www.facebook.com/"><img width="60" height="60" src="Images/fb.png" title="facebook" alt="facebook"></a>
+ <br><br><br>
+ <br><br><br>
+        <!-- Footer -->
+  <footer class="py-5 bg-dark"Style="opacity:0.89 !Important; " >
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; The Sign Shop 2020</p>
+            <a href="https://www.facebook.com/"><img width="60" height="60" src="Images/fb.png" title="facebook" alt="facebook"></a>
       <a href="https://www.Twitter.com/"><img width="60" height="60" src="Images/twitter.jpg" title="twitter" alt="twitter"></a>
       <a href="https://www.Youtube.com/"><img width="60" height="60" src="Images/youtube.jpg" title="youtube" alt="youtube"></a>
+
     </div>
-      
-    </footer>
+
+  </footer>
 </body>
 </html>
